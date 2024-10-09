@@ -1,37 +1,29 @@
-# print("Welcome to the tip calculator")
-# bill = float(input("What was the total bill?\n"))
-# tip = float(input("How much tip would you like to give? 10, 12, or 15 ?\n"))
-# people = int(input("How many people split the bill?\n"))
-# res = round((bill + tip)/people)
-# print("Each person should pay: $" + str(res))
+student_scores = {
+    'Harry': 88,
+    'Ron': 78,
+    'Hermione': 95,
+    'Draco': 75,
+    'Neville': 60
+}
 
-# print("Hello, World!")
-# print("Hello, World!n\nnew")
-# print("I am " + "Ganesh " + str(True)) #Hello world #How are you
+student_grades = {}
 
-# name = input("What is your name\n")
-# name = "Ganesh"
-# pet = "poco"
-# # print("you name is  %s, rignt? %s" % (name, pet))
-# print("Your name is %s, and your pet's name is %s, right?" % (name, "poco"))
+# print(student_scores)
 
-# *******************************************************************************
-#           |                   |                  |                     |
-#  _________|________________.=""_;=.______________|_____________________|_______
-# |                   |  ,-"_,=""     `"=.|                  |
-# |___________________|__"=._o`"-._        `"=.______________|___________________
-#           |                `"=._o`"=._      _`"=._                     |
-#  _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
-# |                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
-# |___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
-#           |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
-#  _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
-# |                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
-# |___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
-# ____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
-# /______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
-# ____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
-# /______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
-# ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
-# /______/______/______/______/______/______/______/______/______/______/[TomekK]
-# *******************************************************************************
+# for key in student_scores:
+#     if 90 < student_scores[key] <= 100:
+#         student_grades[key] = "Outstanding"
+#     elif 80 < student_scores[key] <= 90:
+#         student_grades[key] = "Exceeds Expectations"
+#     elif 70 < student_scores[key] <= 80:
+#         student_grades[key] = "Acceptable"
+#     else:
+#         student_grades[key]  = "Fail"
+
+# print(student_grades)
+x = {
+    "a": 9,
+    "b": 8,
+}
+
+print(x[1])
