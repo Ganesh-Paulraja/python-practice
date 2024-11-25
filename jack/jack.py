@@ -39,9 +39,9 @@ if play == 'y':
     user_cards = [user_card_1, user_card_2]
     computer_cards = [computer_card_1]
 
-    user_score = sum(user_cards)
-    computer_score = sum(computer_cards) + computer_card_2
     while continue_game:
+      user_score = sum(user_cards)
+      computer_score = sum(computer_cards) + computer_card_2
       print(f"Your cards: {user_cards}, current score: {user_score}")
       print(f"Computer's first card: {computer_cards}")
       if user_score == 21 and computer_score == 21:
