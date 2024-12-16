@@ -29,7 +29,7 @@ def number_check ():
         
         if lives == 0:
           game_over = True
-          print("0 lives left you lost")
+          print(f"0 lives left you lost. your number is {chosen_number}")
           return
 
 number_check ()   
