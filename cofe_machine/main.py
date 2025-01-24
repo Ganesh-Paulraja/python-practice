@@ -7,7 +7,7 @@ menu = {
         "cost": 1.5,
     },
     "latte": {
-        "ingredientd": {
+        "ingredients": {
             "water": 200,
             "milk": 150,
             "coffee": 24,
