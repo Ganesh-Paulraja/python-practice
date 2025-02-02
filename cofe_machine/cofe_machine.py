@@ -18,7 +18,9 @@ def process_coins():
     total += int(input("how many pennies?: ")) * 0.01
     return total
 
-# is_on = True
+
+
+is_on = True
 
 while is_on:
     choice = input("What would you like? (esspresso/latte/cappuccino)")
