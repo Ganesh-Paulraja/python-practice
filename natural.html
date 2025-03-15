@@ -1,439 +1,528 @@
 <style>
-    #shopify-section-header {
-      z-index: 9999 !important;
+  .cc-rv-stick4582762 {
+    display: none;
+    position: relative;
+    left: -5px;
+    top: 5px;
+    padding-left: 10px;
+    button {
+      position: relative;
     }
-  
-    .cc-rv-backdrop {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: rgb(0 0 0 / 0%);
-      display: none;
-      width: 100%;
-      height: 100%;
-      z-index: 999;
+    img {
+      font-size: 20px;
+      max-width: 25px;
+      display: block;
+      width: 25px;
     }
-    .cc-rv-section {
-      display: none;
-      z-index: 9999;
-      .cc-rv-sticky {
-        position: relative;
-        /* margin-top: 10px; */
-        &:before {
-          width: 0;
-          height: 0;
-          border-color: transparent transparent #b2000b;
-          border-style: solid;
-          border-width: 0 10px 15px;
-          content: " ";
-          position: absolute;
-          bottom: -13px;
-          left: 0;
-          margin: 0 auto;
-          right: 0px;
-          pointer-events: none;
-          display: none;
-        }
-        .cc-recent {
-          background: #242424;
-          width: 50px;
-          height: 50px;
-          text-align: center;
-          position: relative;
-          cursor: pointer;
-          border-radius: 50%;
-          border: 0;
-          outline: 0;
-          img {
-            width: 20px !important;
-            padding-top: 5px;
-          }
-          .cc-recent-count {
-            background: #fed102;
-            color: #000;
-            width: 19px;
-            height: 18px;
-            line-height: 19px;
-            font-size: 13px;
-            position: absolute;
-            top: -6px;
-            right: 0px;
-            border-radius: 50%;
-            padding: 0;
-            text-align: center;
-          }
-        }
-        .cc-rv-arrows {
-          position: absolute;
-          top: 15px;
-          right: 18px;
-          width: 6px;
-          transform: rotate(90deg);
-        }
-      }
-      .cc-main-content {
-        position: absolute;
-        background: #fff;
-        width: 380px;
-        right: 59px;
-        margin: 0 auto;
-        top: 75px;
-        flex-wrap: nowrap;
-        max-width: 380px;
-        border-radius: 6px;
-        align-items: center;
-        padding: 0;
-        display: none;
-        .cc-recent-header {
-          background: #b2000b;
-          text-align: left;
-          height: 50px;
-          line-height: 50px;
-          color: #fff;
-          padding-left: 20px;
-          font-weight: 600;
-          font-size: 18px;
-          border-top-left-radius: 6px;
-          border-top-right-radius: 6px;
-          position: relative;
-          p {
-            margin: 0;
-          }
-          .cc-close {
-            position: absolute;
-            top: 3px;
-            right: 15px;
-            cursor: pointer;
-            img {
-              width: 15px;
-            }
-          }
-        }
-      }
-      ::-webkit-scrollbar {
-        width: 3px;
-        height: 5px;
-      }
-      /* Track */
-      ::-webkit-scrollbar-track {
-        background: #e6e6e6;
-      }
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: #747474;
-      }
-      .cc-rv-content {
-        max-height: 400px;
-        overflow-y: scroll;
-        display: none;
-        padding: 0px 10px;
-        margin: 10px 10px;
-        .cc-rv-pro-list {
-          text-align: left;
-          padding: 20px 0px 20px;
-          display: flex;
-          flex-wrap: nowrap;
-          align-items: center;
-          justify-content: center;
-          /* height: 108px; */
-          border-bottom: 1px solid #d1c9c9;
-          .cc-rv-pro-img,
-          .cc-rv-pro-info {
-            a {
-              display: block;
-              &:focus {
-                outline: 0;
-              }
-            }
-          }
-          .cc-rv-pro-img {
-            margin: 0 auto;
-            width: 40%;
-            img {
-              display: block;
-              object-fit: contain;
-              background: #f5f5f5;
-              border: 2px solid #c7c5c5;
-              width: 200px;
-            }
-          }
-          .cc-rv-pro-info {
-            width: 60%;
-            .cc-rvp-title {
-              display: inline-block;
-              vertical-align: middle;
-              .cc-rvp-link {
-                display: inline-block;
-                color: #000;
-                font-size: 15px;
-                font-weight: 900;
-                text-decoration: none;
-                line-height: 1.2;
-                cursor: pointer;
-                text-align: left;
-                text-transform: uppercase;
-                &:hover {
-                  color: #000;
-                }
-                &:focus {
-                  outline: 0;
-                }
-              }
-            }
-            .cc-sub-text.cc-review-shown {
-              display: inline-block;
-            }
-            .cc-sub-head {
-              color: #999898;
-            }
-            .cc-sub-text {
-              display: none;
-              vertical-align: middle;
-              float: right;
-              right: 20px;
-              position: relative;
-              span {
-                display: inline-block;
-                vertical-align: middle;
-                font-weight: 700;
-              }
-              img {
-                display: inline-block;
-                vertical-align: inherit;
-                height: 18px;
-                position: relative;
-                top: -1px;
-              }
-            }
-            .cc-rvp-price {
-              font-size: 15px;
-              font-weight: 900;
-              margin-top: 8px;
-              color: #000;
-            }
-            .cc-rv-pro-action .cc-rvp-link {
-              display: inline-block;
-              color: #fff;
-              background: #b2000b;
-              font-size: 15px;
-              font-weight: 500;
-              text-decoration: none;
-              padding: 5px 20px;
-              margin-top: 10px;
-              border-radius: 2px;
-              &:focus {
-                outline: 0;
-              }
-            }
-          }
-          &:last-child {
-            margin-bottom: 0px;
-          }
-        }
-      }
+    .cc-recent-count {
+      position: absolute;
+      width: fit-content;
+      height: 20px;
+      background: #ea2e2b;
+      color: #ffffff;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1;
+      padding: 0 6px;
+      border-radius: 10px;
+      top: -8px;
+      left: 10px;
     }
-    .cc-rv-open {
-      .cc-main-content {
-        display: block;
+  }
+  #rand-id-rv-section {
+    display: none;
+    position: fixed;
+    top: 70px;
+    right: 115px;
+    width: 300px;
+    height: fit-content;
+    transition: all 1s;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0 0 2px 0 rgb(137 143 148 / 80%);
+    .ccc-rv-star {
+      position: relative;
+      width: fit-content;
+      .cc-bg {
+        display: flex;
       }
-      .cc-rv-content {
-        display: block;
-      }
-      .cc-rv-sticky {
-        position: relative;
-        &:before {
+      .cc-star {
+        display: flex;
+        gap: 2px;
+        color: #e3e3e3;
+        .cc-star-icon {
           display: block;
+          min-width: 13px;
+          max-width: 13px;
         }
       }
-      .cc-rv-backdrop {
-        display: block;
+      .cc-star-val {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: fit-content;
+        overflow: hidden;
+        .cc-star {
+          color: #ffb647;
+        }
       }
-      .cc-rv-section {
-        right: 0px;
-        z-index: 100005;
+      .cc-rv-viewcount {
+        position: absolute;
+        left: 78px;
+        top: -4px;
+        display: block;
+        min-width: 127px;
+        font-size: 11px;
       }
     }
-  </style>
-  <script src="https://cdn.convertcart.com/uploads/01290877.js" defer></script>
-  <cc-snippet append-to="body">
-    <div class="cc-rv-backdrop"></div>
-  </cc-snippet>
-  <cc-snippet prepend-to='.header__action-list'>
-    <div class="cc-rv-section">
-      <div class="cc-rv-sticky">
-        <button class="cc-recent">
-          <img src="https://cdn.convertcart.com/uploads/8934806e.png">
-          <div class="cc-recent-count"></div>
-        </button>
+    .cc-rv-heading {
+      text-align: center;
+      background: #000000;
+      color: #ffffff;
+      font-size: 15px;
+      padding: 5px 0;
+      margin-bottom: 7px;
+      .cc-head-arrow {
+        position: absolute;
+        top: -12px;
+        width: 26px;
+        right: 55px;
+      }
+      .cc-closed {
+        position: absolute;
+        right: 8px;
+        top: 13px;
+        cursor: pointer;
+        img {
+          width: 11px;
+        }
+      }
+    }
+    .cc-rv-sticky {
+      position: absolute;
+      top: 60%;
+      left: -89px;
+      background: #166fb0;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 10px 40px 10px 15px;
+      transform: rotate(-90deg) translateY(-50%);
+      cursor: pointer;
+      text-transform: uppercase;
+      img {
+        width: 7px;
+        transform: rotate(90deg);
+        position: absolute;
+        right: 20px;
+        top: 12px;
+      }
+    }
+    .cc-rvp-view-product {
+      margin: 7px auto 0px;
+      a {
+        color: #fff;
+        width: 100%;
+        padding: 3px 5px 4px;
+        font-size: 12px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 600;
+        background: #ea2e2b;
+        outline: 0;
+        box-shadow: none;
+      }
+      a:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+    .cc-rv-content {
+      position: relative;
+      display: block;
+      padding-bottom: 0px;
+      .swiper-container {
+        max-height: 470px;
+        overflow: hidden;
+      }
+      .swiper-wrapper {
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: inherit;
+      }
+    }
+    .cc-rvp-list {
+      padding: 0;
+      flex-shrink: 1;
+      height: auto;
+      margin-bottom: 0px;
+      a:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+      .cc-box-wrap {
+        border: 2px solid #e7e2de;
+        padding: 5px;
+      }
+      .cc-rv-product {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        outline: 0;
+        padding: 0 8px;
+        background: #fff;
+        text-align: left;
+      }
+      a {
+        display: block;
+      }
+      .cc-rvp-image {
+        outline: 0;
+        margin-right: 15px;
+        img {
+          width: 65px;
+          height: 98px;
+          outline: 0;
+          border: 0;
+          padding: 0;
+        }
+      }
+      .cc-pro-wrap {
+        display: flex;
+      }
+      .cc-rvp-title {
+        a {
+          display: block;
+          font-size: 12px;
+          font-weight: 600;
+          color: #50323e;
+          text-decoration: none;
+          outline: 0;
+          line-height: 1.4;
+          text-align: left;
+          overflow: hidden;
+          padding-top: 3px;
+          width: 165px;
+        }
+      }
+      .ccc-rv-star {
+        height: 20px;
+        margin-top: 5px;
+      }
+      .cc-rvp-price {
+        font-size: 12px;
+        font-weight: 600;
+        color: #b43131;
+        padding: 5px 0px;
+        .cc_was_price {
+          display: block;
+          color: #8a8a8a;
+          text-decoration: line-through;
+          font-size: 12px;
+          line-height: 1;
+        }
+        .cc-sale {
+          display: block;
+          font-size: 15px;
+          color: #ea2e2b;
+        }
+      }
+      .cc-pri-off {
+        display: flex;
+        align-items: center;
+        .cc-offer {
+          color: #107e13;
+          font-size: 13px;
+          position: relative;
+          left: 10px;
+          top: 2px;
+        }
+      }
+    }
+    .cc-rv-arrows {
+      display: none;
+      position: absolute;
+      cursor: pointer;
+      opacity: 1;
+      z-index: 99;
+      outline: 0;
+    }
+    .cc-rv-prev {
+      right: 115px;
+      bottom: 10px;
+      img {
+        width: 25px;
+      }
+    }
+    .cc-rv-next {
+      bottom: 10px;
+      left: 115px;
+      img {
+        width: 25px;
+      }
+    }
+    .swiper-button-disabled {
+      filter: grayscale(1);
+      opacity: 0.5;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    #rand-id-rv-section {
+      right: 65px;
+    }
+  }
+  #launcher {
+    right: 30px !important;
+  }
+  #rand-id-rv-section.cc-rvp-open {
+    display: block !important;
+  }
+  #rand-id-rv-section.cc-less-product {
+    .cc-rv-content {
+      height: auto !important;
+    }
+  }
+</style>
+<script src="https://cdn.convertcart.com/uploads/01290877.js" defer></script>
+<cc-snippet prepend-to='.header__action-list'>
+  <div class="cc-rv-stick4582762">
+    <div class="cc-rv-sticky">
+      <button class="cc-recent">
+        <img src="https://cdn.convertcart.com/uploads/c35ae546.svg" alt="recently viewed">
+        <div class="cc-recent-count">0</div>
+      </button>
+    </div>
+  </div>
+</cc-snippet>
+<cc-snippet prepend-to='.header__action-list'>
+  <div id="rand-id-rv-section" class="cc-rv-section">
+
+    <div class="cc-rv-arrows cc-rv-prev">
+      <img src="https://cdn.convertcart.com/uploads/47480b19.svg" alt="previous">
+    </div>
+    <div class="cc-rv-content">
+      <div class="cc-rv-heading">
+        <img src="https://cdn.convertcart.com/uploads/40686fca.svg" class="cc-head-arrow">
+        RecentlyViewed
+        <span class="cc-closed">
+          <img src="https://cdn.convertcart.com/uploads/6eceaeff.svg" alt="close">
+        </span>
       </div>
-      <div class="cc-main-content">
-        <div class="cc-recent-header">
-          <p>RECENTLY VIEWED</p>
-          <a class="cc-close">
-            <img src="https://cdn.convertcart.com/uploads/44428b7f.png" alt="close">
+      <div class="swiper-container">
+        <div class="swiper-wrapper"></div>
+      </div>
+    </div>
+    <div class="cc-rv-arrows cc-rv-next">
+      <img src="https://cdn.convertcart.com/uploads/646dc7da.svg" alt="next">
+    </div>
+  </div>
+</cc-snippet>
+<cc-snippet name="ccRRVproduct">
+  <div class="cc-rvp-list swiper-slide">
+    <div class="cc-rv-product">
+      <div class="cc-box-wrap">
+        <div class="cc-pro-wrap">
+        <div class="cc-rvp-image">
+          <a class="cc-rvp-link" href="#">
+            <img src="" />
           </a>
         </div>
-        <div class="swiper-container">
-          <div class="cc-rv-content swiper-wrapper"></div>
+        <div class="cc-content">
+          <div class="cc-brand-name"></div>
+          <div class="cc-rvp-title">
+            <a class="cc-rvp-link" href="#"></a>
+          </div>
+          <div class="ccc-rv-star">
+            <div class="cc-bg">
+
+            </div>
+            <div class="cc-star-val">
+
+            </div>
+          </div>
+          <div class="cc-rvp-price product-price">
+            <!-- <span class="cc_was_price">Cover price<span></span></span> -->
+            <div class="cc-pri-off"><span class="cc-sale"></span> 
+            <!-- <span class="cc-offer">You Save <span></span>%</span> -->
+            </div>
+          </div>
         </div>
-        
+        </div>
+        <div class="cc-rvp-view-product">
+          <a class="cc-rvp-link" href="#" data-title="ViewDetails">View Product</a>
+        </div>
       </div>
+     
+      
     </div>
-  </cc-snippet>
-  <cc-snippet name="ccRRVproduct">
-    <div class="cc-rv-pro-list">
-      <div class="cc-rv-pro-img">
-        <a class="cc-rvp-link" href="#">
-          <img src="#" alt="product image">
-        </a>
-      </div>
-      <div class="cc-rv-pro-info">
-        <div class="cc-rvp-title">
-          <a class="cc-rvp-link" href="#"></a>
-        </div>
-        <div class="cc-sub-text">
-          <span></span>
-          <img class="cc-review-img" src="https://cdn.convertcart.com/uploads/13a0e98f.jpg" alt="reviews">
-        </div>
-        <div class="cc-sub-head"></div>
-        <!-- <div class="cc-reviews-count">
-        </div> -->
-        <div class="cc-rvp-price"></div>
-        <div class="cc-rv-pro-action">
-          <a class="cc-rvp-link" href="#">View Product</a>
-        </div>
-        <!-- <div class="cc-unitsold-count"></div> -->
-      </div>
-    </div>
-  </cc-snippet>
-  <script>
-    const $ = require('zepto');
-    const { ctx, snippets } = campaign;
-    const ccObj = $('.cc-rv-section');
-    const ccObjcontent = ccObj.find('.cc-rv-content');
-    let ccproducts;
-    function ccInitSlider() {
-      new Swiper('.swiper-container', {
-        slidesPerView: 2,
-        spaceBetween: 25,
-        centeredSlides: false,
-        allowTouchMove: false,
-        direction: 'vertical',
-        autoHeight: true,
-        navigation: {
-          nextEl: '.cc-rv-next',
-          prevEl: '.cc-rv-prev',
+  </div>
+</cc-snippet>
+<script>
+  var $ = require('zepto');
+  const { ctx, randId, snippets } = campaign;
+  const ccRsection = $(`#${randId}rv-section`);
+  const ccRVPcontent = ccRsection.find('.cc-rv-content .swiper-wrapper');
+  let ccproducts;
+  $('body').addClass('ccRecent');
+  function cctruncate(source, size) {
+    return source.length > size ? source.slice(0, size - 1) + '…' : source;
+  }
+  function ccInitSlider() {
+    new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 0,
+      centeredSlides: false,
+      allowTouchMove: false,
+      direction: 'vertical',
+      autoHeight: false,
+      navigation: {
+        nextEl: '.cc-rv-next',
+        prevEl: '.cc-rv-prev',
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
         },
-        breakpoints: {
-          1024: {
-            slidesPerView: 2,
-          },
-        },
-      });
-    }
-    function ccReview(url, path) {
-      fetch(url).then(res => res.text()).then((res) => {
-        var data = JSON.stringify(res);
-        var ccData = JSON.parse(data);
-        if ($(ccData).find('#reviewBoxes').length) {
-          $('.cc-sub-text').eq(path).addClass('cc-review-shown');
+      },
+    });
+  }
+  const starSvg = `<span class="cc-star">
+    <svg class="cc-star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="currentColor" d="M6.826 10.743l-3.28 1.724a.5.5 0 0 1-.725-.528l.627-3.65a.5.5 0 0 0-.144-.443L.65 5.26a.5.5 0 0 1 .277-.853l3.666-.533a.5.5 0 0 0 .377-.273L6.61.279a.5.5 0 0 1 .896 0L9.147 3.6a.5.5 0 0 0 .376.273l3.666.533a.5.5 0 0 1 .277.853l-2.653 2.586a.5.5 0 0 0-.144.442l.627 3.651a.5.5 0 0 1-.726.528l-3.279-1.724a.5.5 0 0 0-.465 0z"></path></svg>
+    <svg class="cc-star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="currentColor" d="M6.826 10.743l-3.28 1.724a.5.5 0 0 1-.725-.528l.627-3.65a.5.5 0 0 0-.144-.443L.65 5.26a.5.5 0 0 1 .277-.853l3.666-.533a.5.5 0 0 0 .377-.273L6.61.279a.5.5 0 0 1 .896 0L9.147 3.6a.5.5 0 0 0 .376.273l3.666.533a.5.5 0 0 1 .277.853l-2.653 2.586a.5.5 0 0 0-.144.442l.627 3.651a.5.5 0 0 1-.726.528l-3.279-1.724a.5.5 0 0 0-.465 0z"></path></svg>
+    <svg class="cc-star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="currentColor" d="M6.826 10.743l-3.28 1.724a.5.5 0 0 1-.725-.528l.627-3.65a.5.5 0 0 0-.144-.443L.65 5.26a.5.5 0 0 1 .277-.853l3.666-.533a.5.5 0 0 0 .377-.273L6.61.279a.5.5 0 0 1 .896 0L9.147 3.6a.5.5 0 0 0 .376.273l3.666.533a.5.5 0 0 1 .277.853l-2.653 2.586a.5.5 0 0 0-.144.442l.627 3.651a.5.5 0 0 1-.726.528l-3.279-1.724a.5.5 0 0 0-.465 0z"></path></svg>
+    <svg class="cc-star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="currentColor" d="M6.826 10.743l-3.28 1.724a.5.5 0 0 1-.725-.528l.627-3.65a.5.5 0 0 0-.144-.443L.65 5.26a.5.5 0 0 1 .277-.853l3.666-.533a.5.5 0 0 0 .377-.273L6.61.279a.5.5 0 0 1 .896 0L9.147 3.6a.5.5 0 0 0 .376.273l3.666.533a.5.5 0 0 1 .277.853l-2.653 2.586a.5.5 0 0 0-.144.442l.627 3.651a.5.5 0 0 1-.726.528l-3.279-1.724a.5.5 0 0 0-.465 0z"></path></svg>
+    <svg class="cc-star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="currentColor" d="M6.826 10.743l-3.28 1.724a.5.5 0 0 1-.725-.528l.627-3.65a.5.5 0 0 0-.144-.443L.65 5.26a.5.5 0 0 1 .277-.853l3.666-.533a.5.5 0 0 0 .377-.273L6.61.279a.5.5 0 0 1 .896 0L9.147 3.6a.5.5 0 0 0 .376.273l3.666.533a.5.5 0 0 1 .277.853l-2.653 2.586a.5.5 0 0 0-.144.442l.627 3.651a.5.5 0 0 1-.726.528l-3.279-1.724a.5.5 0 0 0-.465 0z"></path></svg>
+  </span>`;
+  function ccRVInit() {
+    var ccCurrency;
+    ccproducts.forEach((prod) => {
+      const rv = $(snippets.ccRRVproduct);
+      rv.attr('data-product_id', prod.field2);
+      const ccurl = `${prod.url}`;
+      const ccPrice = parseFloat(prod.price);
+      const ccPri = ccPrice.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+      if (prod.field3.length) {
+        const ccSingle = parseFloat(prod.field3);
+        const ccSingle_Pri = ccSingle.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+      } else {
+        rv.find('.cc-rvp-price .cc-sale').text(`${ccCurrency}${ccPri}`);
+      }
+      // const ccRealPrice = parseFloat(prod.field1);
+      // const ccRealPri = ccRealPrice.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+      ccCurrency = '$';
+      const api = `https://app.convertcart.com/v1/84591586/review/public/product?productId=${prod.field2}`;
+      fetch(api).then(res => res.json()).then((res) => {
+        if (res.overview.avgRating && res.overview.avgRating > 0) {
+          const ccWidth = res.overview.avgRating * 20;
+          rv.find('.ccc-rv-star .cc-bg').append(starSvg);
+          rv.find('.ccc-rv-star .cc-star-val').append(starSvg);
+          rv.find('.ccc-rv-star').append(`<div class="cc-rv-viewcount">(${res.overview.ratingCount} Reviews)</div>`);
+          rv.find('.ccc-rv-star .cc-star-val').css('width', `${ccWidth}%`);
         }
-        $('.cc-sub-text span').eq(path).append($(ccData).find('#reviewBoxes .glsr-summary-rating span').html());
-        $('.cc-sub-head').eq(path).append($(ccData).find('.rx-product-header .rx_type h2').html());
       });
-    }
-    function ccRVInit() {
-      ccproducts.forEach((prod, i) => {
-        const ccObjrv = $(snippets.ccRRVproduct);
-        ccReview(prod.url, i);
-        const ccurl = `${prod.url}`;
-        const ccPrice = parseFloat(prod.price);
-        ccObjrv.find('.cc-rvp-price').text(`$${(ccPrice || 0).toFixed(2)}`);
-        ccObjrv.find('.cc-rv-pro-img img').attr('src', prod.image);
-        ccObjrv.find('.cc-rvp-title a').text(prod.name);
-        ccObjrv.find('.cc-rvp-link').attr('href', ccurl);
-        ccObjrv.find('.cc-rv-pro-img a').on('click', function (e) {
-          const ccLink = $(this).attr('href');
-          e.preventDefault();
-          campaign.trigger('Clicked.productimage');
-          setTimeout(() => {
-            window.location.href = ccLink;
-          }, 1000);
-        });
-        ccObjrv.find('.cc-rvp-title a').on('click', function (e) {
-          const ccLink = $(this).attr('href');
-          e.preventDefault();
-          campaign.trigger('clicked.productname');
-          setTimeout(() => {
-            window.location.href = ccLink;
-          }, 1000);
-        });
-        ccObjrv.find('.cc-rv-pro-action a').on('click', function (e) {
-          const ccLink = $(this).attr('href');
-          e.preventDefault();
-          campaign.trigger('clicked.viewproduct');
-          setTimeout(() => {
-            window.location.href = ccLink;
-          }, 1000);
-        });
-        ccObjrv.appendTo(ccObjcontent);
+      // if (ccPri < ccRealPri) {
+      //   rv.find('.cc-rvp-price .cc_was_price span').text(`${ccCurrency}${ccRealPri}`);
+      //   let result = ((ccRealPri - ccPri) / ccRealPri) * 100;
+      //   result = Math.round(result);
+      //   rv.find('.cc-offer span').text(result)
+      // } else {
+      //   rv.find('.cc-rvp-price .cc_was_price').hide();
+      //   rv.find('.cc-offer').hide();
+      // }
+      rv.find('.cc-rvp-image img').attr('src', prod.image);
+      rv.find('.cc-rvp-title a').attr('href', ccurl).text(cctruncate(prod.name, 18));
+      rv.find('.cc-rvp-link').attr('href', ccurl);
+      rv.find('.cc-rvp-image a').on('click', function (e) {
+        const ccLink = $(this).attr('href');
+        e.preventDefault();
+        campaign.trigger('Clicked.ProductImage');
+        setTimeout(() => {
+          window.location.href = ccLink;
+        }, 1000);
       });
-    }
-    ctx.ccart('get', 'productsViewed', (products) => {
-      ccproducts = (products || []).slice(-15);
-      const ccObjprod = ccproducts.reverse();
-      ccRVInit();
-      const clength = ccObjprod.length;
-      if (ccObjprod.length >= 1) {
-        ccObj.show();
-      }
-      $('.cc-recent-count').text(clength);
+      rv.find('.cc-rvp-title a').on('click', function (e) {
+        const ccLink = $(this).attr('href');
+        e.preventDefault();
+        campaign.trigger('Clicked.ProductName');
+        setTimeout(() => {
+          window.location.href = ccLink;
+        }, 1000);
+      });
+      rv.find('.cc-rvp-view-product a').on('click', function (e) {
+        const ccLink = $(this).attr('href');
+        e.preventDefault();
+        campaign.trigger('Clicked.ViewProduct');
+        setTimeout(() => {
+          window.location.href = ccLink;
+        }, 1000);
+      });
+      rv.appendTo(ccRVPcontent);
     });
-    function togglePanel() {
-      if (ccObj.hasClass('cc-rv-open')) {
-        ccObj.removeClass('cc-rv-open');
+    if (ccproducts.length == 1) {
+      ccRsection.addClass('cc-rv-one-product');
+    } else {
+      ccRsection.removeClass('cc-rv-one-product');
+    }
+    if (ccproducts.length == 2) {
+      ccRsection.addClass('cc-two-product');
+    } else {
+      ccRsection.removeClass('cc-two-product');
+    }
+    if (ccproducts.length >= 3) {
+      $('.cc-rv-arrows').css('display', 'block');
+    }
+  }
+  ctx.ccart('get', 'productsViewed', (products) => {
+    ccproducts = (products || []).slice(-10);
+    ccproducts.reverse();
+    ccRVInit();
+    if (ccproducts.length > 0) {
+      $('.cc-rv-stick4582762').show();
+      $('.cc-rv-stick4582762 .cc-recent-count').text(ccproducts.length);
+    }
+    if (ccproducts.length == 0) ccRsection.hide();
+  });
+
+  ccRsection.find('.cc-rv-next').on('click', (e) => {
+    e.preventDefault();
+    campaign.trigger('Clicked.Next');
+  });
+  ccRsection.find('.cc-rv-prev').on('click', (e) => {
+    e.preventDefault();
+    campaign.trigger('Clicked.Previous');
+  });
+  $(document).on('click', (event) => {
+    if (!$(event.target).closest('.cc-rv-section').length && !$(event.target).closest('.cc-rv-stick4582762').length) {
+      if (ccRsection.hasClass('cc-rvp-open')) {
+        ccRsection.removeClass('cc-rvp-open');
         $('body').removeClass('cc-rvp-active');
-        $('.cc-rv-backdrop').hide();
-      } else {
-        ccObj.addClass('cc-rv-open');
-        $('body').addClass('cc-rvp-active');
-        $('.cc-rv-backdrop').show();
+        campaign.trigger('clicked.minimized');
       }
     }
-    ccObj.on('click', '.cc-rv-sticky', function (e) {
-      e.preventDefault();
-      togglePanel();
-      campaign.trigger('Clicked.recentlyviewedicon');
-    });
-    ccObj.on('click', '.cc-close', function () {
-      togglePanel();
-      campaign.trigger('Clicked.close');
-    });
-    $(document).on('click', '.cc-rv-backdrop', () => {
-      togglePanel();
-    });
-    function ccstock() {
-      const ccstockcheck = $('body.ax-hamburger-opened').length;
-      if (ccstockcheck > 0) {
-        ccObj.removeClass('cc-rv-open');
-        $('body').removeClass('cc-rvp-active');
-        $('.cc-rv-backdrop').hide();
+  });
+  $('.cc-rv-stick4582762 .cc-recent').on('click', () => {
+    if (ccRsection.hasClass('cc-rvp-open')) {
+      ccRsection.removeClass('cc-rvp-open');
+      $('body').removeClass('cc-rvp-active');
+      campaign.trigger('clicked.minimized');
+    } else {
+      ccRsection.addClass('cc-rvp-open');
+      campaign.trigger('clicked.maximized');
+      $('body').addClass('cc-rvp-active');
+      if (ccproducts.length > 3) {
+        ccRsection.find('.cc-rv-content').css('paddingBottom', '45px');
+        ccInitSlider();
       }
     }
-    ccstock();
-    setInterval(ccstock, 1000);
-    function ccScrollDetect() {
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        $('body').addClass('cc-re-Search-sticky');
-      } else {
-        $('body').removeClass('cc-re-Search-sticky');
-      }
-    }
-    ccScrollDetect();
-    window.addEventListener('scroll', () => {
-      ccScrollDetect();
-    }, true);
-    ccInitSlider();
-  </script>
+  });
+  $('.cc-rv-stick4582762 .cc-closed').on('click', () => {
+    ccRsection.removeClass('cc-rvp-open');
+    $('body').removeClass('cc-rvp-active');
+    campaign.trigger('clicked.minimized');
+  });
+</script>

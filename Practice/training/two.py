@@ -1,20 +1,45 @@
-# Loop Structure
+# for x in range(10):
+#     print(x)
 
-# 1. for_loop
+# t = int(input("Enter which table: "))
+# n = int(input("Enter the times: "))
 
-# type 1
+# for i in range(1, n+1):
+#     print(f'{i} * {t} = {i * t}')
 
-# for <variable> in range(n): **0 to n-1
-#     statments(s)
-# **0 to n-1
 
-# type 2
-# for <variable> in range(initial, n): **initial to n-1
-#     statments(s)
-# **initial to n-1
+# if (i == 5 ): break for loop
+#     break
 
-# type 3
-# for <variable> in range(initial, n, step): **initial to n-1 , step starts from 2 , -1 for reverse
-#     statments(s)
-# **initial to n-1
-# step starts from 2 , -1 for reverse
+# while <condition>:
+#     statement()
+#     change condition
+
+
+# n = 125
+
+# s = 0
+
+# while n > 0:
+#     r = n % 10
+#     s = s + r
+#     n = int(n/10)
+
+# print(s)
+
+# n = int(input('Enter YOur Number: '))
+# m = n
+# s = 0
+
+# while m > 0:
+#     r = m % 10 
+#     s += r ** 3
+#     m = int(m/10)
+
+# if n == s:
+#     print('This is amstrong number')
+# else:
+#     print("This is not amstrong number")
+
+
+# Array
